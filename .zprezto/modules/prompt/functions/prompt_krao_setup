@@ -1,0 +1,22 @@
+function prompt_krao_precmd {
+  vcs_info
+}
+function prompt_krao_setup {
+ autoload -Uz vcs_info
+ add-zsh-hook precmd prompt_krao_precmd
+
+  zstyle ':vcs_info:*' enable git
+  zstyle ':vcs_info:*' check-for-changes true
+  zstyle ':vcs_info:*' unstagedstr '!'
+  zstyle ':vcs_info:*' stagedstr '+'
+  zstyle ':vcs_info:*' actionformats "%S" "%r|%s|%b %u%c (%a)"
+  zstyle ':vcs_info:*' formats "%S" "%r|%s|%b %u%c"
+  zstyle ':vcs_info:*' nvcsformats "%~" ""
+
+
+ # Define prompts.
+ PROMPT="%% "
+ RPROMPT="%F{cyan}"'${vcs_info_msg_1_}'""
+}
+
+prompt_krao_setup
