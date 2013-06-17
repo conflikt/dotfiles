@@ -16,7 +16,7 @@ function prompt_krao_setup {
 
  # Define prompts.
  PROMPT="%% "
- RPROMPT="%F{cyan}"'${vcs_info_msg_1_}'""
+ RPROMPT="%F{cyan}"'${vcs_info_msg_1_}'"%f"
 }
 
 prompt_krao_setup
