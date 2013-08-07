@@ -1,0 +1,30 @@
+set guifont=Ayuthaya:h11
+"set guifont=monofur:h15
+"set guifont=Inconsolata-dz\ for\ Powerline:h10
+"set guifont=Monaco:h10
+"set guifont=Inconsolata\ XL:h11
+colorscheme happyjoy
+"colorscheme Tomorrow-Night-Bright
+"colorscheme Solarized
+"colorscheme blackboard_black
+"colorscheme close_to_the_sea
+" Gitv bindings
+nmap <leader>gv :Gitv --all<CR>
+nmap <leader>gV :Gitv! --all<CR>
+vmap <leader>gV :Gitv! --all<CR>
+
+if has("gui_running")
+  set guioptions-=m  "remove menu bar
+  set guioptions-=T  "remove toolbar
+  set guioptions-=r  "remove right-hand scroll bar
+  set go-=L  "remove right-hand scroll bar
+  set go-=M  "remove right-hand scroll bar
+  map <D-S-RIGHT> <C-w>l
+  map <D-S-LEFT> <C-w>h
+  map <D-S-DOWN> <C-w><C-w>
+  map <D-S-UP> <C-w>W
+  set hidden
+  set rnu
+  set antialias
+  set nohlsearch
+endif
